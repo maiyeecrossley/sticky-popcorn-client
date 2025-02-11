@@ -1,6 +1,7 @@
 export default function ({ filterBy, setFilterBy }) {
     return (
         <section id="filters">
+            <label htmlFor="decade">Decade </label>
             <select name="filterBy" value={filterBy} onChange={(event) => {
                 const value = event.target.value
                 setFilterBy(value)}

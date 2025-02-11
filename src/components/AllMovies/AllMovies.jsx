@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { movieIndex } from '../../services/movieService'
 import MovieGrid from './MovieGrid'
-import Filters from '../NavMenu/Filters';
-import MovieCard from './MovieCard';
+import Filters from '../NavMenu/Filters'
+import Genre from '../NavMenu/Genre';
+import MovieCard from './MovieCard'
 import styles from './AllMovies.module.css'
 
 
@@ -66,6 +67,7 @@ export default function AllMovies() {
             value={searchTerm}
           />
             <Filters filterBy={filterBy} setFilterBy={setFilterBy}/>
+            <Genre />
             <MovieGrid>
                 {displayedMovies.map(movie => (
                     <MovieCard key={movie._id} movie={movie} />
