@@ -1,26 +1,45 @@
-import styles from '../NavMenu/Nav.module.css'
+import React, { useState } from 'react';
+import Multiselect from 'multiselect-react-dropdown';
 
-export default function Genre() {
+export default function GenreSelector ({ selectedGenres, setSelectedGenres }) {
+  const genres = [
+    { name: 'Action', id: 1 },
+    { name: 'Adventure', id: 2 },
+    { name: 'Biography', id: 3 },
+    { name: 'Comedy', id: 4 },
+    { name: 'Crime', id: 5 },
+    { name: 'Drama', id: 6 },
+    { name: 'Fantasy', id: 7 },
+    { name: 'History', id: 8 },
+    { name: 'Horror', id: 9 },
+    { name: 'Mystery', id: 10 },
+    { name: 'Romance', id: 11 },
+    { name: 'Thriller', id: 12 },
+    { name: 'Sci-Fi', id: 13 },
+    { name: 'War', id: 14 },
+  ];
 
-    return (
-        <div className="dropdown">
-        <button className="dropdown-toggle" onClick={handleGenre}>Select Genre</button>
-        <div className="dropdown-menu">
-            <label><input type="checkbox" value="Action" /> Action</label>
-            <label><input type="checkbox" value="Adventure" /> Adventure</label>
-            <label><input type="checkbox" value="Biography" /> Biography</label>
-            <label><input type="checkbox" value="Comedy" /> Comedy</label>
-            <label><input type="checkbox" value="Crime" /> Crime</label>
-            <label><input type="checkbox" value="Drama" /> Drama</label>
-            <label><input type="checkbox" value="Fantasy" /> Fantasy</label>
-            <label><input type="checkbox" value="History" /> History</label>
-            <label><input type="checkbox" value="Horror" /> Horror</label>
-            <label><input type="checkbox" value="Mystery" /> Mystery</label>
-            <label><input type="checkbox" value="Romance" /> Romance</label>
-            <label><input type="checkbox" value="Thriller" /> Thriller</label>
-            <label><input type="checkbox" value="Sci-Fi" /> Sci-Fi</label>
-            <label><input type="checkbox" value="War" /> War</label>
-        </div>
+  const onSelect = (selectedList, selectedItem) => {
+    setSelectedGenres(selectedList)
+  }
+
+  const onRemove = (selectedList, removedItem) => {
+    setSelectedGenres(selectedList)
+  }
+
+  console.log(selectedGenres)
+
+  return (
+    <div>
+      <Multiselect
+        options={genres}
+        selectedValues={selectedGenres}
+        onSelect={onSelect}
+        onRemove={onRemove}
+        displayValue="name"
+        showCheckbox
+        placeholder="Select Genres"
+      />
     </div>
-    )
+  )
 }

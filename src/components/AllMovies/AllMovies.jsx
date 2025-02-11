@@ -14,6 +14,7 @@ export default function AllMovies() {
     const [displayedMovies, setDisplayedMovies] = useState([])
     const [filterBy, setFilterBy] = useState('All')
     const [searchTerm, setSearchTerm] = useState('')
+    const [selectedGenres, setSelectedGenres] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
 
     // On component mount (first render only)
@@ -48,9 +49,17 @@ export default function AllMovies() {
             movie.title.toLowerCase().startsWith(searchTerm.toLowerCase()))
         }
 
+        if (selectedGenres.length > 0) {
+            const selectedGenreNames = selectedGenres.map(genre => genre.name)
+            console.log(selectedGenreNames)
+            results = results.filter(movie => {
+                return movie.genre.some((genre) => selectedGenreNames.includes(genre))
+            })
+        }
+
         setDisplayedMovies(results)
 
-    }, [filterBy, searchTerm, movies])
+    }, [filterBy, searchTerm, movies, selectedGenres])
 
     const handleSearch = (e) => {
         setSearchTerm(e.target.value.toLowerCase())
@@ -67,7 +76,7 @@ export default function AllMovies() {
             value={searchTerm}
           />
             <Filters filterBy={filterBy} setFilterBy={setFilterBy}/>
-            <Genre />
+            <Genre selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>
             <MovieGrid>
                 {displayedMovies.map(movie => (
                     <MovieCard key={movie._id} movie={movie} />
