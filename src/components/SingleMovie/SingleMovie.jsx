@@ -28,8 +28,11 @@ export default function SingleMovie() {
             try {
                 const data = await movieShow(movieId)
                 setMovie(data)
-                setIsFavourite(data?.favouritedBy?.some(fb => fb._id === user._id))
-                setIsWatchlist (data?.watchlistBy?.some(wb => wb._id === user._id))
+
+                if (user) {
+                    setIsFavourite(data?.favouritedBy?.some(fb => fb._id === user._id))
+                    setIsWatchlist (data?.watchlistBy?.some(wb => wb._id === user._id))   
+                }
             } catch (error) {
                 if (error.status === 400) {
                     setError('Movie not found.')
