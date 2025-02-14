@@ -154,7 +154,7 @@ export default function SingleMovie() {
                             <blockquote className={styles.reviewContent}>
                                 "{randomReview.content}"
                             </blockquote>
-                            <p className={styles.reviewAuthor}>- {randomReview.author.username}</p>
+                            <p className={styles.reviewAuthor}>- {randomReview.author?.username}</p>
                         </section>
 
                     )}

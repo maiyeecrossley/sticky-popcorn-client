@@ -81,6 +81,7 @@ export default function AllMovies() {
                 </div>
                 <Filters filterBy={filterBy} setFilterBy={setFilterBy}/>
                 <Genre selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres}/>
+
                 </section>
                 <div className={styles.movieContainer}>
                 { isLoading ? <Spinner /> : displayedMovies.length > 0 ? 
