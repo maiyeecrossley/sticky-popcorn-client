@@ -21,7 +21,8 @@
   .tagline {
     font-family: "Bebas Neue", sans-serif;
     font-size: 18px;
-
+    color: white;
+    margin-bottom: -15px;
   }
 
   .sitename {
@@ -30,10 +31,13 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
+    text-decoration: none;
 }
 
-
+.headinglink{
+  text-decoration: none;
+  display: flex;
+}
 
 
 .multiselect{

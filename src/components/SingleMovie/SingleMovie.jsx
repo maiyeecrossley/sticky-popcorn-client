@@ -75,12 +75,8 @@ export default function SingleMovie() {
     const handleAddFavourite = async (movieId) => {
         try {
             const response = await addUserFavourite(movieId)
-
-            console.log(response)
-
             setMovie(response)
             setIsFavourite(!isFavourite)
-
 
             if (!response || !response._id) {
                 throw new Error("Invalid response from the server");
@@ -100,9 +96,9 @@ export default function SingleMovie() {
 
     const handleAddWatchlist = async (movieId) => {
         try {
-
             const response = await addUserWatchlist(movieId)
-            console.log(response)
+            setMovie(response)
+            setIsWatchlist(!isWatchlist)
 
             if (!response || !response._id) {
                 throw new Error("Invalid response from the server");
