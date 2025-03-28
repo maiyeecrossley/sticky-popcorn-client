@@ -13,7 +13,11 @@ The app focuses on building a Node.js/Express/MongoDB with full CRUD functionali
 
 ## Time Frame
 
-The project took one week from day of planning, and was a team-based project that consisted of myself, Claire, and Kamran. 
+The project took one week from day of planning, and was a team-based project that consisted of:
+- myself, 
+- [Claire](https://github.com/Claire-bot87), 
+- [Kamran](https://github.com/Kam-Gemini). 
+
 We implemented the use of Trello, ERD(Entity Relationship Diagram), routing table, and Excalidraw for the wireframes to help us plan the project.
 
 ## Tech Stack
