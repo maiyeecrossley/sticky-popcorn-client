@@ -137,14 +137,30 @@ Whilst working through the reviews model, I had to consider how it related to th
 
 
 ## Wins
+- The team dynamic was amazing! We worked together really well, supported each other, and helped debug each other's codes, even outside of the usual working hours.
+- Daily mini stand-ups with the team helped tracked each other's progress.
+- Understanding of GitHub version control.
+- Overall look of the application, with pieces brought together at the end.
 
 ## Key Learnings
 
+I felt this React app has really helped me understand how components work, and the ability to resue them across different parts of the app, especially since this was my first application using React for the front-end. 
+I also really enjoyed working as part of a team, and being able to bounce ideas to come up with a solution together. As fun as this was, it was also interesting to see things from a different perspective. It's given me a valuable experience using GitHub for version control in a collaborative settings, particularly when creating braches, making pull requests, and reviewing each other's codes and handling merges.
+
 ## Bugs
+I'm not currently aware of any bugs at this moment in time, particularly when demoing the application.
+
 
 ## Future Improvements
+- Make some style changes to reflect my choice of colour palettes
+- Add more layout changes to the home page
 
 #### Asset Attributions
-
+[Movies icons created by Freepik - Flaticon](https://www.flaticon.com/free-icon/cinema_3507102?term=popcorn&related_id=3507102)
 
 #### Tools
+
+- Trello - for user story planning
+- Excalidraw - to draw out wire frames
+- [Google Fonts - Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue)
+- [Google Fonts - Cormorant Garmond](https://fonts.google.com/specimen/Cormorant+Garamond)
